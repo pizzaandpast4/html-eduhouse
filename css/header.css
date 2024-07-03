@@ -1,8 +1,9 @@
 .main-header {
+    grid-area: header;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
+    margin-bottom: 20px;
 }
 
 .form {
@@ -54,4 +55,57 @@
 .avatar {
     height: 50px;
     border-radius: 50%;
+}
+
+.xmas {
+    display: flex;
+    position: fixed;
+    height: 10px;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.xmas > div {
+    height: 100%;
+    width: 100%;
+    animation-name: marry;
+    animation-duration: 5s;
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
+}
+
+.xmas > div:nth-child(4n + 1) {
+    animation-delay: -1.25s;
+}
+
+.xmas > div:nth-child(4n + 2) {
+    animation-delay: -2.55s;
+}
+
+.xmas > div:nth-child(4n + 3) {
+    animation-delay: -3.75s;
+}
+
+.xmas > div:nth-child(4n) {
+    animation-delay: -5s;
+}
+
+@keyframes marry {
+    0% {
+        background-color: yellow;
+    }
+    25% {
+        background-color: red;
+    }
+    50% {
+        background-color: green;
+     }
+    75% {
+        background-color: blue;
+    }
+    100% {
+        background-color: orange;
+    }
+
 }
